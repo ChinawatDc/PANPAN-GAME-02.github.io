@@ -6,7 +6,7 @@ import Spawner from "./Spawner";
 import Fruit from "./Fruit";
 import { useFruits } from "../Store/fruits";
 import Colliders from "./Colliders";
-import { OrthographicCamera, Plane } from "@react-three/drei";
+import { OrthographicCamera } from "@react-three/drei";
 import TopLine from "./TopLine";
 import Background from "./Background";
 
