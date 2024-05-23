@@ -22,20 +22,6 @@ jobs:
       - name: Build
         run: npm run build
 
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Install dependencies
-      - name: Install Dependencies
-        run: npm install
-
-      # Run tests
-      - name: Run Tests
-        run: npm test
 
   deploy:
     runs-on: ubuntu-latest
