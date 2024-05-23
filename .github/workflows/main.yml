@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
       
-      # Install dependencies and build
+      # Install dependencies
       - name: Install Dependencies
         run: npm install
+
+      # Build
       - name: Build
         run: npm run build
 
@@ -23,22 +26,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Install dependencies and run tests
+      # Install dependencies
       - name: Install Dependencies
         run: npm install
+
+      # Run tests
       - name: Run Tests
         run: npm test
 
-  start:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Install dependencies and start the application
+      # Install dependencies
       - name: Install Dependencies
         run: npm install
-      - name: Start Application
-        run: npm start
+
+      # Deploy to hosting service (e.g., GitHub Pages, Netlify, Vercel, etc.)
+      # Replace the following lines with your deployment script or command
+      - name: Deploy to Hosting Service
+        run: |
+          # Add your deployment command here
+          echo "Deploying to hosting service..."
