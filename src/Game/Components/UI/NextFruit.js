@@ -18,7 +18,7 @@ const NextFruit = () => {
       <Bubble title="NEXT" size={250}>
         <Fruit color={nextFruit.color} />
       </Bubble>
-      <Bubble title="FRUITS" size={350} />
+      {/* <Bubble title="FRUITS" size={350} /> */}
     </Panel>
   );
 };

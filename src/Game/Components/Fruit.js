@@ -54,7 +54,7 @@ const Fruit = (props) => {
       }}
     >
       <Circle args={[radius, 32]} position={props.position}>
-        <meshBasicMaterial map={props.image} transparent={true} color={0xffffff} depthTest={false} />
+        <meshBasicMaterial map={props.image} transparent={false} color={0xffffff} depthTest={false} />
       </Circle>
     </RigidBody>
   );

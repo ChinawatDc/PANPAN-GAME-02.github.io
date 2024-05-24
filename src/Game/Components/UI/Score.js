@@ -19,9 +19,9 @@ const Score = () => {
       <Bubble title={"SCORE"} size={300}>
         <Title fontSize={64}>{score}</Title>
         <Text fontSize={24}>คะแนนที่ดีที่สุด</Text>
-        <Text fontSize={48}>2962</Text>
+        <Text fontSize={48}>9999</Text>
       </Bubble>
-      <Scoreboard />
+      {/* <Scoreboard /> */}
     </Panel>
   );
 };

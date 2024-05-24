@@ -95,7 +95,7 @@ const fruits = [
     index: 10,
     name: "watermelon",
     ratio: 620 / 300,
-    image: new THREE.TextureLoader().load(require("../../Assets/Fruits/watermelon.png")),
+    image: new THREE.TextureLoader().load(require("../../Assets/Fruits/11.png")),
     color: "#2CA40C",
     mass: 1.1,
     points: 66,
