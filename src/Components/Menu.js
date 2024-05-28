@@ -19,12 +19,18 @@ function Menu() {
               <p className="second-text">แพนๆ OX</p>
             </div>
           </Link>
-          <Link to="/game3">
+          <Link>
             <div class="card red">
               <p class="tip">Game 3</p>
               <p class="second-text">แพนๆ ลูกบอล</p>
             </div>
           </Link>
+          {/* <Link to="/game3" >
+            <div class="card red">
+              <p class="tip">Game 3</p>
+              <p class="second-text">แพนๆ ลูกบอล</p>
+            </div>
+          </Link> */}
           <Link to="/game4">
             <div class="card yellow">
               <p class="tip">Game 4</p>

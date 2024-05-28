@@ -17,6 +17,17 @@ let { ballObj, paddleProps, brickObj, player } = data;
 export default function Board() {
   const canvasRef = useRef(null);
   const [isGameOver, setIsGameOver] = useState(false);
+  const ballImageRef = useRef(null);
+
+  useEffect(() => {
+    const ballImage = new Image();
+    ballImage.src = '/assets/O.png';
+    console.log(ballImage);
+    ballImage.onload = () => {
+      ballImageRef.current = ballImage;
+      requestAnimationFrame(render);
+    };
+  }, []);
 
   const render = () => {
     const canvas = canvasRef.current;
@@ -39,7 +50,7 @@ export default function Board() {
     });
 
     // Handle Ball Movement
-    BallMovement(ctx, ballObj);
+    BallMovement(ctx, ballObj, ballImageRef.current);
 
     // Check all broken
     AllBroken(bricks, player, canvas, ballObj);
@@ -75,10 +86,6 @@ export default function Board() {
 
     requestAnimationFrame(render);
   };
-
-  useEffect(() => {
-    render();
-  }, []);
 
   const resetGame = () => {
     player.lives = 5;
